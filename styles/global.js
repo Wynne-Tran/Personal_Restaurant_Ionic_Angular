@@ -8,7 +8,7 @@ export const globalStyles = StyleSheet.create({
     },
     titleText: {
         fontFamily: 'fruktur-regular',
-        fontSize: 15,
+        fontSize: 12,
         color: 'black',
         textAlign: "center",
         marginLeft: 10,
@@ -35,7 +35,7 @@ export const globalStyles = StyleSheet.create({
     buttonText:{
         fontWeight: 'bold',
         textTransform: 'uppercase',
-        fontSize: 20,
+        fontSize: 16,
         textAlign: 'center',
         marginLeft: 10,
 
@@ -77,8 +77,8 @@ export const globalStyles = StyleSheet.create({
       elevation: 5
     },
     image: {
-        width: 80, 
-        height: 80,
+        width: 70, 
+        height: 70,
         marginTop: -10,
        
     },
@@ -88,7 +88,7 @@ export const globalStyles = StyleSheet.create({
       }
     ,
     card : {
-        borderRadius: 16,
+        borderRadius: 6,
         elevation: 3,
         shadowOffset: {width: 1, height: 1},
         shadowColor: "#333",

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Modal, ActivityIndicator,
    Text, View, Image, ImageBackground} from 'react-native';
-   import * as Location from 'expo-location';
+import * as Location from 'expo-location';
 import { globalStyles } from './styles/global';
 import Card from './shared/card'
 import * as Font from 'expo-font'
@@ -48,9 +48,8 @@ const ListScreen = ()=>{
 
     
   }, []);
-  
-  function getIcon(icon){ return "http://openweathermap.org/img/wn/" + icon + "@2x.png"}
 
+  function getIcon(icon){ return "http://openweathermap.org/img/wn/" + icon + "@2x.png"}
 
   return (
 
@@ -68,20 +67,20 @@ const ListScreen = ()=>{
               <Text style={globalStyles.titleText}>Loading ...</Text>
             </> :
             
-            
             <View >
-              <Text style={{marginTop: 40, marginBottom: 5, marginLeft: 5 ,fontFamily: 'fruktur-regular',fontSize: 30,color: 'green',textAlign: "center"}}>{data.timezone}</Text>
-            
-              
-              <Card>
+              <Text style={{marginTop: 50, marginBottom: 5, marginLeft: 5 ,fontFamily: 'fruktur-regular',fontSize: 30,color: 'green',textAlign: "center"}}>{data.timezone}</Text>
+          
+              <Card >
               <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-              <Image source={{uri: getIcon(day[0].weather[0].icon) }} style={globalStyles.image} />
+              <Image source={{uri: getIcon(data.current.weather[0].icon) }} style={globalStyles.image} />
               <Text style={globalStyles.titleText}>
                 {days[(new Date(day[0].dt * 1000)).getDay()]} 
                 {"\n"}
-                <Text style={globalStyles.buttonText}>{day[0].weather[0].main}</Text>
+                <Text style={globalStyles.buttonText}>{data.current.weather[0].main}</Text>
+                {"\n"}
+                <Text style={{fontSize: 14, fontWeight: 'bold', color: 'red'}}>Current</Text>
               </Text>
-              <Text style={globalStyles.degreeText}>{Math.round(Math.round(day[0].temp.day))}°C</Text>
+              <Text style={globalStyles.degreeText}>{Math.round(data.current.temp)}°C</Text>
             </View>
             </Card>
 
@@ -94,7 +93,7 @@ const ListScreen = ()=>{
                 {"\n"}
                 <Text style={globalStyles.buttonText}>{day[1].weather[0].main}</Text>
               </Text>
-              <Text style={globalStyles.degreeText}>{Math.round(Math.round(day[1].temp.day))}°C</Text>
+              <Text style={globalStyles.degreeText}>{Math.round(day[1].temp.day)}°C</Text>
             </View>
             </Card>
             <Card>
