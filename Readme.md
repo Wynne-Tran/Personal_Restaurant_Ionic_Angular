@@ -12,6 +12,9 @@ Full Project Demo:
 
 https://www.youtube.com/watch?v=v-D4lZALW_U
 
+Figma design:
+https://www.figma.com/file/2MY3y3NeaOlOeBuCLHvvVs/Personal-Restaurant-GuidePrototype?type=design&node-id=0-1&t=62LyRMqs2vX9UgAS-0
+
               
 # 🪐 Contact Author
 
